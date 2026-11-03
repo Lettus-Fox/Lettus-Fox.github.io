@@ -13,7 +13,14 @@ function draw() {
     let y = startY + yStep * i;
     if (racerXs[i] < finishX) {
       racerXs[i] += random(1, 5);
+      if (keyIsDown(RIGHT_ARROW)) {
+        racerXs[i] += random(1, 3)
+      }
+      if (keyIsDown(LEFT_ARROW)) {
+        racerXs[i] -= random(1, 3)
+      }
     }
     circle(racerXs[i], y, 25);
-    }
   }
+
+}
