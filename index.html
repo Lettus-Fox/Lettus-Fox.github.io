@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p5.js Broken Snake</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <div class="hud">
+        <div class="score-box">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-box">
+          <span class="label">Best</span>
+          <strong id="best-score">0</strong>
+        </div>
+      </div>
+
+      <div class="game-wrap">
+        <canvas id="game" width="500" height="500" aria-label="Snake game board"></canvas>
+        <div id="overlay" class="overlay show">
+          <h1>Snake</h1>
+          <p id="overlay-text">Press Space to start</p>
+        </div>
+      </div>
+
+      <p class="controls">Use arrow keys to move. Press Space to restart.</p>
+    </main>
+
     <script src="snake.js"></script>
-</body>
+  </body>
 </html>
