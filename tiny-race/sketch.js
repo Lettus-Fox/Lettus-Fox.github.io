@@ -1,7 +1,8 @@
-let racerXs = [30, 30, 30, 30];
+let racerXs = [10, 10, 10, 10,];
 let startY = 50;
 let yStep = 60;
 let finishX = 560;
+
 function setup() {
   createCanvas(600, startY + yStep * racerXs.length);
 }
@@ -13,14 +14,21 @@ function draw() {
     let y = startY + yStep * i;
     if (racerXs[i] < finishX) {
       racerXs[i] += random(1, 5);
-      if (keyIsDown(RIGHT_ARROW)) {
-        racerXs[i] += random(1, 3)
-      }
-      if (keyIsDown(LEFT_ARROW)) {
-        racerXs[i] -= random(1, 3)
+      fill("gray") 
+    } else {
+      if (i = 2){
+        
       }
     }
     circle(racerXs[i], y, 25);
   }
+}
+if (racerXs[0] >= finishX) {
+  fill("yellow")
+}
+
+if (racerXs[1] >= finishX) {
 
 }
+
+
