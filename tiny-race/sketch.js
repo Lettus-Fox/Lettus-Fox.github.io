@@ -16,8 +16,8 @@ function draw() {
       racerXs[i] += random(1, 5);
       fill("gray") 
     } else {
-      if (i = 2){
-        
+      if (i == 2){
+        fill("blue")
       }
     }
     circle(racerXs[i], y, 25);
